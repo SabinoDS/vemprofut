@@ -10,6 +10,7 @@ import {
   Button,
   useDisclosure,
 } from "@nextui-org/react";
+import { QuadraModal } from "./QuadraModal";
 
 export const QuadraComponent = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -36,7 +37,7 @@ export const QuadraComponent = () => {
 
       <div
         className="p-3 mb-1 absolute flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        style={{ top: "55px", left: "80px" }}
+        style={{ top: "25%", left: "35%" }}
         onClick={HandleOpenModal}
       >
         <svg
@@ -46,6 +47,7 @@ export const QuadraComponent = () => {
           height="45"
           viewBox="0 0 88 75"
           fill="none"
+          onClick={HandleOpenModal}
         >
           <g opacity="0.6">
             <path
@@ -61,41 +63,12 @@ export const QuadraComponent = () => {
           </g>
         </svg>
       </div>
-
       <div className="p-3 mb-1">
         <p>Ginásio Bola na Rede</p>
         <span>R. Barão de Santa Tecla, 193 A</span>
       </div>
 
-      <Modal isOpen={isOpen} onClose={onClose} style={{ width: "980px" }}>
-        <ModalContent>
-          <ModalHeader className="mt-6">
-            <Image src={quadra} alt="Quadra" className="object-cover" />
-          </ModalHeader>
-          <ModalBody
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              fontSize: "14px",
-              gap: "10px",
-            }}
-          >
-            <div style={{ display: "flex", flexDirection: "column" }}>
-              <span>Horários para agendamento</span>
-              <select name="" id="">
-                <option value="">segunda 19h-30</option>
-              </select>
-            </div>
-            <div>
-              <p>Ginásio Bola na Rede</p>
-              <span>R. Barão de Santa Tecla, 193 A</span>
-            </div>
-          </ModalBody>
-          <ModalFooter>
-            <Button onClick={onClose}>Concluir</Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
+      {isOpen && <QuadraModal isOpen={isOpen} onClose={onClose} />}
     </div>
   );
 };
