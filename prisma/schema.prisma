@@ -12,12 +12,24 @@ datasource db {
 }
 
 model User {
-  id       Int      @id @default(autoincrement())
-  name     String?  @db.VarChar(255)
-  email    String   @unique @db.VarChar(255)
-  password String   @db.VarChar(255)
-  cpf      String?  @unique @db.VarChar(11)
-  telefone String?  @db.VarChar(11)
-  bio      String?  @db.VarChar(255)
-  foto     String?  @db.VarChar(255)
+  id       Int     @id @default(autoincrement())
+  name     String? @db.VarChar(255)
+  email    String  @unique @db.VarChar(255)
+  password String  @db.VarChar(255)
+  cpf      String? @unique @db.VarChar(11)
+  telefone String? @db.VarChar(11)
+  bio      String? @db.VarChar(255)
+  foto     String? @db.VarChar(255)
+}
+
+model Quadra {
+  id        Int     @id @default(autoincrement())
+  nome      String  @db.VarChar(255)
+  descricao String? @db.VarChar(255)
+  endereco  String  @db.VarChar(255)
+  telefone  String? @db.VarChar(11)
+  foto      String? @db.VarChar(255)
+  valor     Float?  @db.Float
+  horario   String? @db.VarChar(255)
+  avaliacao Float?  @db.Float 
 }
