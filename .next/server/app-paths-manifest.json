@@ -1,8 +1,3 @@
 {
-  "/page": "app/page.js",
-<<<<<<< HEAD
-  "/administration/page": "app/administration/page.js"
-=======
   "/initial/page": "app/initial/page.js"
->>>>>>> origin/main
 }
