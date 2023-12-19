@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // File: /Users/sabinoprog/Desktop/vemprofut/app/page.tsx
+=======
+// File: C:\Users\Luiz\OneDrive\Área de Trabalho\Meus Documentos\Projetos\vemprofut\app\page.tsx
+>>>>>>> origin/main
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
